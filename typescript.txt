@@ -21,7 +21,7 @@ Select an option from the menu below:
 (4) ship an order 
 (5) print pending orders (not shipped yet) with customer information 
 (6) more options
-(7) exit  
+(7) exit   
 
 -------------------------------------
 
