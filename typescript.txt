@@ -1,0 +1,443 @@
+praneetha@praneetha-virtual-machine:~/Desktop/sql$ ./typescript.sh 
+Script started on Sat 30 Mar 2024 05:24:38 PM EDT
+
+Compiling Java program using the command: 
+javac Main.java
+
+Compilation successful!
+Running compiled Java program using the command: 
+java -cp .:mysql-connector-j-8.3.0.jar Main
+Connected to database
+
+
+Welcome to Northwind Customer Order Management Solution!
+
+-------------------------------------
+Select an option from the menu below:
+-------------------------------------
+(1) add a customer  
+(2) add an order  
+(3) remove an order 
+(4) ship an order 
+(5) print pending orders (not shipped yet) with customer information 
+(6) more options
+(7) exit  
+
+-------------------------------------
+
+Enter the number corresponding to your choice: 1
+Enter customer's first name: Ryan
+Enter customer's last name: Parker
+Enter customer's email ID: ryanparker@gmail.com
+Enter street name: 321 S Avenue
+Enter city: Kalamazoo
+Enter state: MI
+Enter zip code: 45678
+Enter country: USA
+Enter customer mobile number (_ _ _ -_ _ _ -_ _ _ _): 321-098-0987
+
+Customer added successfully.
+
+
+
+
+
+-------------------------------------
+Select an option from the menu below:
+-------------------------------------
+(1) add a customer  
+(2) add an order  
+(3) remove an order 
+(4) ship an order 
+(5) print pending orders (not shipped yet) with customer information 
+(6) more options
+(7) exit  
+
+-------------------------------------
+
+Enter the number corresponding to your choice: 2
+Enter CustomerID: 48
+Enter EmployeeID: 2
+Enter OrderDate (yyyy-mm-dd): 2024-03-30
+Enter ShipName: Karen Lee
+Enter Shipping Address: 321 S Avenue
+Enter Product-ID (or 0 to finish): 4
+Enter Quantity: 5
+Enter Product-ID (or 0 to finish): 43
+Enter Quantity: 2
+Enter Product-ID (or 0 to finish): 0
+
+---------------
+Order Added
+
+
+
+
+-------------------------------------
+Select an option from the menu below:
+-------------------------------------
+(1) add a customer  
+(2) add an order  
+(3) remove an order 
+(4) ship an order 
+(5) print pending orders (not shipped yet) with customer information 
+(6) more options
+(7) exit  
+
+-------------------------------------
+
+Enter the number corresponding to your choice: 3
+Enter Order ID for deletion: 110
+
+---------------
+ Order deleted
+
+
+
+-------------------------------------
+Select an option from the menu below:
+-------------------------------------
+(1) add a customer  
+(2) add an order  
+(3) remove an order 
+(4) ship an order 
+(5) print pending orders (not shipped yet) with customer information 
+(6) more options
+(7) exit  
+
+-------------------------------------
+
+Enter the number corresponding to your choice: 4
+Enter the Order ID to Ship: 113
+Enter Shipper ID: 2
+Enter Shipping Fee: 20
+
+---------------
+Order with ID 113 has been shipped successfully.
+
+
+
+-------------------------------------
+Select an option from the menu below:
+-------------------------------------
+(1) add a customer  
+(2) add an order  
+(3) remove an order 
+(4) ship an order 
+(5) print pending orders (not shipped yet) with customer information 
+(6) more options
+(7) exit  
+
+-------------------------------------
+
+Enter the number corresponding to your choice: 5
+Pending Orders:
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+OrderID    OrderDate            ID                   FirstName            LastName             Email                                    Address              City                 State                Country             
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+96         2005-03-04 00:00:00  3                    Thomas               Axen                 null                                     123 3rd Street       Los Angelas          CA                   USA                 
+41         2006-03-24 00:00:00  7                    Ming-Yang            Xie                  null                                     123 7th Street       Boise                ID                   USA                 
+80         2006-04-25 17:03:55  4                    Christina            Lee                  null                                     123 4th Street       New York             NY                   USA                 
+81         2006-04-25 17:26:53  3                    Thomas               Axen                 null                                     123 3rd Street       Los Angelas          CA                   USA                 
+68         2006-05-24 00:00:00  7                    Ming-Yang            Xie                  null                                     123 7th Street       Boise                ID                   USA                 
+70         2006-05-24 00:00:00  11                   Peter                Krschne              null                                     123 11th Street      Miami                FL                   USA                 
+71         2006-05-24 00:00:00  1                    Anna                 Bedecs               null                                     123 1st Street       Seattle              WA                   USA                 
+112        2024-02-01 00:00:00  11                   Peter                Krschne              null                                     123 11th Street      Miami                FL                   USA                 
+117        2024-03-30 00:00:00  48                   Ryan                 Parker               ryanparker@gmail.com                     321 S Avenue         Kalamazoo            MI                   USA                 
+111        2026-03-03 00:00:00  2                    Antonio              Gratacos Solsona     null                                     123 2nd Street       Boston               MA                   USA                 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+End of Pending Orders List...
+
+
+
+-------------------------------------
+Select an option from the menu below:
+-------------------------------------
+(1) add a customer  
+(2) add an order  
+(3) remove an order 
+(4) ship an order 
+(5) print pending orders (not shipped yet) with customer information 
+(6) more options
+(7) exit  
+
+-------------------------------------
+
+Enter the number corresponding to your choice: 6
+
+
+
+---------------------------
+More Options:
+---------------------------
+(1) generateInvoice
+(2) updateOrderInformation
+(3) View customers, employees, and shippers
+(4) Return to Main Menu
+
+ ------------------------------
+
+Enter the number corresponding to your choice: 1
+Enter Order ID for which you want to generate an invoice: 117
+Products:
+Product: Northwind Traders Cajun Seasoning Quantity:  5.00 Price: $     22.00
+Product: Northwind Traders Coffee       Quantity:  2.00 Price: $     46.00
+
+Invoice Date: 2024-03-30
+Order ID: 117
+Customer Name: Ryan Parker
+Total Amount: $202.0
+Tax: $0.0
+Amount Due: $202.0
+
+
+
+---------------------------
+More Options:
+---------------------------
+(1) generateInvoice
+(2) updateOrderInformation
+(3) View customers, employees, and shippers
+(4) Return to Main Menu
+
+ ------------------------------
+
+Enter the number corresponding to your choice: 2
+Enter the Order ID to Update: 117
+
+Original Order Products:
+ProductID: 4, Product Name: Northwind Traders Cajun Seasoning, Quantity: 5.0, Unit Price: 22.0
+ProductID: 43, Product Name: Northwind Traders Coffee, Quantity: 2.0, Unit Price: 46.0
+
+Enter New Order Information:
+Order Date (yyyy-mm-dd): 2024-03-30
+Ship Name: Karen Lee
+Ship Address: 321 S Avenue, Kalamazoo,MI - 45678,USA
+
+Update Order Products:
+Enter Product ID (or 0 to finish): 4
+Enter Quantity: 2
+Enter Product ID (or 0 to finish): 0
+
+---------------
+Order with ID 117 has been updated successfully.
+
+
+
+
+---------------------------
+More Options:
+---------------------------
+(1) generateInvoice
+(2) updateOrderInformation
+(3) View customers, employees, and shippers
+(4) Return to Main Menu
+
+ ------------------------------
+
+Enter the number corresponding to your choice: 1
+Enter Order ID for which you want to generate an invoice: 117
+Products:
+Product: Northwind Traders Cajun Seasoning Quantity:  2.00 Price: $     22.00
+
+Invoice Date: 2024-03-30
+Order ID: 117
+Customer Name: Ryan Parker
+Total Amount: $44.0
+Tax: $0.0
+Amount Due: $44.0
+
+
+
+---------------------------
+More Options:
+---------------------------
+(1) generateInvoice
+(2) updateOrderInformation
+(3) View customers, employees, and shippers
+(4) Return to Main Menu
+
+ ------------------------------
+
+Enter the number corresponding to your choice: 3
+
+
+
+---------------------------
+View Options:
+---------------------------
+(1) View Customers
+(2) View Employees
+(3) View Shippers
+(4) Return to More Options
+
+ ------------------------------
+
+Enter the number corresponding to your choice: 
+1
+Customers:
+-------------------------------------------------------------------------------
+ID    FirstName            LastName             Email               
+-------------------------------------------------------------------------------
+1     Anna                 Bedecs               null                
+2     Antonio              Gratacos Solsona     null                
+3     Thomas               Axen                 null                
+4     Christina            Lee                  null                
+5     Martin               ODonnell             null                
+6     Francisco            Perez-Olaeta         null                
+7     Ming-Yang            Xie                  null                
+8     Elizabeth            Andersen             null                
+9     Sven                 Mortensen            null                
+10    Roland               Wacker               null                
+11    Peter                Krschne              null                
+12    John                 Edwards              null                
+13    Andre                Ludick               null                
+14    Carlos               Grilo                null                
+15    Helena               Kupkova              null                
+16    Daniel               Goldschmidt          null                
+17    Jean Philippe        Bagel                null                
+18    Catherine            Autier Miconi        null                
+19    Alexander            Eggerer              null                
+20    George               Li                   null                
+21    Bernard              Tham                 null                
+22    Luciana              Ramos                null                
+23    Michael              Entin                null                
+24    Jonas                Hasselberg           null                
+25    John                 Rodman               null                
+26    Run                  Liu                  null                
+27    Karen                Toh                  null                
+28    Amritansh            Raghav               null                
+29    Soo Jung             Lee                  null                
+30    Harry Kane           null                 null                
+31    as                   null                 as                  
+32    Harry                null                 harry@gmail.com     
+33    qw                   null                 weq                 
+34    Anna                 null                 anna@gmail.com      
+35    Alan                 null                 alan@gmail.com      
+36    Sarah                null                 sarah@gmail.com     
+37    Barbie               Ken                  barbie@gmail.com    
+38    Barbie               Alan                 jd@gmail.com        
+39    Harry                Ben                  harry@emil.com      
+40    Kane                 Sharma               shmar@gmail.com     
+41    Ray                  Kane                 rk@gmail.com        
+42    awq                  qwq                  qw                  
+43    qw                   qw                   121                 
+44    Duck                 Duck                 jnjs@gmail.com      
+45    Kirkland             System               ksk@gmail.com       
+46    raymond              white                raywhite@gmail.com  
+47    Elon                 Musk                 elonm@gmail.com     
+48    Ryan                 Parker               ryanparker@gmail.com
+--------------------------------------------------------------------
+
+End of Customer List...
+
+
+
+
+---------------------------
+View Options:
+---------------------------
+(1) View Customers
+(2) View Employees
+(3) View Shippers
+(4) Return to More Options
+
+ ------------------------------
+
+Enter the number corresponding to your choice: 
+2
+Employees:
+--------------------------------------------------------------------------------------------------------------------------------
+ID    FirstName            LastName             Email                                    JobTitle            
+--------------------------------------------------------------------------------------------------------------------------------
+1     Nancy                Freehafer            nancy@northwindtraders.com               Sales Representative
+2     Andrew               Cencini              andrew@northwindtraders.com              Vice President, Sales
+3     Jan                  Kotas                jan@northwindtraders.com                 Sales Representative
+4     Mariya               Sergienko            mariya@northwindtraders.com              Sales Representative
+5     Steven               Thorpe               steven@northwindtraders.com              Sales Manager       
+6     Michael              Neipper              michael@northwindtraders.com             Sales Representative
+7     Robert               Zare                 robert@northwindtraders.com              Sales Representative
+8     Laura                Giussani             laura@northwindtraders.com               Sales Coordinator   
+9     Anne                 Hellung-Larsen       anne@northwindtraders.com                Sales Representative
+--------------------------------------------------------------------------------------------------------------------------------
+
+End of Employee List...
+
+
+
+
+---------------------------
+View Options:
+---------------------------
+(1) View Customers
+(2) View Employees
+(3) View Shippers
+(4) Return to More Options
+
+ ------------------------------
+
+Enter the number corresponding to your choice: 
+3
+Shippers:
+-----------------------------------------------------------------------------------------------------------------------------------
+ID    Company              Address              City                 State                ZIP                  Country             
+-----------------------------------------------------------------------------------------------------------------------------------
+1     Shipping Company A   123 Any Street       Memphis              TN                   99999                USA                  
+2     Shipping Company B   123 Any Street       Memphis              TN                   99999                USA                  
+3     Shipping Company C   123 Any Street       Memphis              TN                   99999                USA                  
+-------------------------------------------------------------------------------------------------------------------------------------
+
+End of Shipper List...
+
+
+
+
+---------------------------
+View Options:
+---------------------------
+(1) View Customers
+(2) View Employees
+(3) View Shippers
+(4) Return to More Options
+
+ ------------------------------
+
+Enter the number corresponding to your choice: 
+4
+
+
+
+---------------------------
+More Options:
+---------------------------
+(1) generateInvoice
+(2) updateOrderInformation
+(3) View customers, employees, and shippers
+(4) Return to Main Menu
+
+ ------------------------------
+
+Enter the number corresponding to your choice: 4
+
+
+-------------------------------------
+Select an option from the menu below:
+-------------------------------------
+(1) add a customer  
+(2) add an order  
+(3) remove an order 
+(4) ship an order 
+(5) print pending orders (not shipped yet) with customer information 
+(6) more options
+(7) exit  
+
+-------------------------------------
+
+Enter the number corresponding to your choice: 7
+
+---------------
+ Exiting Program 
+
+
+Script done on Sat 30 Mar 2024 05:31:33 PM EDT
